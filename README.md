@@ -17,8 +17,8 @@ Python—sadly, not a foregone conclusion.
 
 ## Running the playbooks
 
-Put the hosts you want to inject dotfiles to in `hosts.yaml`. Then, to
-run either playbook, use
+Copy `host.yaml.example` to `hosts.yaml` and put then fill in the hosts
+you want to inject dotfiles to. Then, to run either playbook, use
 
 ```
 ansible-playbook this_playbook.yaml -i hosts.yaml
