@@ -65,3 +65,10 @@
       copy:
         src: "{{ lookup('env', 'HOME') }}/.zshrc"
         dest: "{{ ansible_env.HOME }}/.zshrc"
+    - name: transfer zshrc ls solarized colors
+      synchronize:
+        src: "{{ lookup('env', 'HOME') }}/.dir_colors/"
+        dest: "{{ ansible_env.HOME }}/.dir_colors/"
+    - name: make zsh default shell
+      become: yes
+      shell: "chsh -s /bin/zsh {{ ansible_env.USER }}"
