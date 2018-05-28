@@ -1,0 +1,7 @@
+# Insert hosts here - see
+# https://docs.ansible.com/ansible/latest/user_guide/intro_inventory.html
+# for more details
+---
+all:
+  hosts:
+    example_host
