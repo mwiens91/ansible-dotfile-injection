@@ -36,11 +36,6 @@
       apt:
         name: pylint3
         state: latest
-    - name: install ranger
-      become: yes
-      apt:
-        name: ranger
-        state: latest
     - name: install virtualenv
       become: yes
       apt:
