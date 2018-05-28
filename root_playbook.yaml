@@ -1,0 +1,67 @@
+#!/usr/bin/env ansible-playbook
+- hosts: all
+  tasks:
+    - name: install git
+      become: yes
+      apt:
+        name: git
+        state: latest
+    - name: install nodejs
+      become: yes
+      apt:
+        name: nodejs
+        state: latest
+    - name: install npm
+      become: yes
+      apt:
+        name: npm
+        state: latest
+    - name: install pip
+      become: yes
+      apt:
+        name: python-pip
+        state: latest
+    - name: install pip3
+      become: yes
+      apt:
+        name: python3-pip
+        state: latest
+    - name: install pylint
+      become: yes
+      apt:
+        name: pylint
+        state: latest
+    - name: install pylint3
+      become: yes
+      apt:
+        name: pylint3
+        state: latest
+    - name: install ranger
+      become: yes
+      apt:
+        name: ranger
+        state: latest
+    - name: install virtualenv
+      become: yes
+      apt:
+        name: virtualenv
+        state: latest
+    - name: install virtualenvwrapper
+      become: yes
+      apt:
+        name: virtualenvwrapper
+        state: latest
+    - name: install zsh
+      become: yes
+      apt:
+        name: zsh
+        state: latest
+    - name: clone oh_my_zsh
+      git:
+        repo: "https://github.com/robbyrussell/oh-my-zsh.git"
+        accept_hostkey: yes
+        dest: "{{ ansible_env.HOME }}/.oh-my-zshtest"
+    - name: transfer zshrc
+      copy:
+        src: "{{ lookup('env', 'HOME') }}/.zshrc"
+        dest: "{{ ansible_env.HOME }}/.zshrc"

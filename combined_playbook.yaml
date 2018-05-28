@@ -1,0 +1,3 @@
+#!/usr/bin/env ansible-playbook
+- import_playbook: nonroot_playbook.yaml
+- import_playbook: root_playbook.yaml

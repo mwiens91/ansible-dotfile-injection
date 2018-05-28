@@ -4,4 +4,5 @@
 ---
 all:
   hosts:
-    example_host
+    example_host_1
+    example_host_2
