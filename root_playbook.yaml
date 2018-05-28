@@ -60,7 +60,7 @@
       git:
         repo: "https://github.com/robbyrussell/oh-my-zsh.git"
         accept_hostkey: yes
-        dest: "{{ ansible_env.HOME }}/.oh-my-zshtest"
+        dest: "{{ ansible_env.HOME }}/.oh-my-zsh"
     - name: transfer zshrc
       copy:
         src: "{{ lookup('env', 'HOME') }}/.zshrc"
