@@ -13,7 +13,8 @@ configuration files. `nonroot_playbook.yaml`, as indicated by its name,
 doesn't require root access on the remote machines;
 `root_playbook.yaml`, as indicated by *its* name, does require root
 access on remote machines—it also assumes the remotes are using `apt` as
-their package managers, so non-Debian-based distros are not supported :(
+their package managers, so non-Debian-based distros are not supported
+:disappointed:.
 
 As it goes with Ansible, these will only work on both local and remote
 machines that don't have prehistoric versions of Python—sadly, not a
