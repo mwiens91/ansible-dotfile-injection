@@ -36,6 +36,11 @@
       apt:
         name: pylint3
         state: latest
+    - name: install tree
+      become: yes
+      apt:
+        name: tree
+        state: latest
     - name: install virtualenv
       become: yes
       apt:
