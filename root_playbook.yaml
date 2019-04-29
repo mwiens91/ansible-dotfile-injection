@@ -56,6 +56,11 @@
       apt:
         name: zsh
         state: latest
+    - name: install tmux
+      become: yes
+      apt:
+        name: tmux
+        state: latest
     - name: clone oh_my_zsh
       git:
         repo: "https://github.com/robbyrussell/oh-my-zsh.git"

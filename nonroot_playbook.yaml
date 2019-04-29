@@ -27,3 +27,7 @@
       synchronize:
         src: "{{ lookup('env', 'HOME') }}/.vim/"
         dest: "{{ ansible_env.HOME }}/.vim/"
+    - name: transfer tmux conf
+      synchronize:
+        src: "{{ lookup('env', 'HOME') }}/.tmux.conf"
+        dest: "{{ ansible_env.HOME }}/.tmux.conf"
