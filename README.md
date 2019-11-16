@@ -51,8 +51,7 @@ approach has some unique benefits:
 + it's straightforward to add/exclude playbook steps (mutability)
 + all of this happens in one command (simplicity)
 
-The downside, which is a very big downside if you're working on ancient
-machines, is that
+The downsides are that
 
 + you need to have Ansible installed on your local machine
 + you need to be running a Debian-based distro on your remote machines
